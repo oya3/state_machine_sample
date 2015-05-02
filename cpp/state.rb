@@ -37,7 +37,7 @@ end
 
 class StateON < StateBase
   def state?
-    puts OFF
+    puts ON
   end
   def start
     puts "何もしない：既にOK状態"
@@ -68,7 +68,11 @@ end
 sw = Switcher.new
 sw.state? # 電源OFF
 sw.stop  # 何もしない：既にOFF状態
+sw.state? # 電源OFF
 sw.start # 状態をONに切り替える処理実行
+sw.state? # 電源ON
 sw.start # 何もしない：既にOK状態
+sw.state? # 電源ON
 sw.stop # 状態をOFFに切り替える処理実行
+sw.state? # 電源OFF
 # binding.pry

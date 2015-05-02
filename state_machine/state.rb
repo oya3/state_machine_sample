@@ -40,8 +40,12 @@ end
 sw = Switcher.new
 puts sw.state # 電源OFF
 sw.stop  # 何もしない：既にOFF状態
+puts sw.state # 電源OFF
 sw.start # 状態をONに切り替える処理実行
+puts sw.state # 電源ON
 sw.start # 何もしない：既にOK状態
+puts sw.state # 電源ON
 sw.stop # 状態をOFFに切り替える処理実行
+puts sw.state # 電源OFF
 # binding.pry
 
